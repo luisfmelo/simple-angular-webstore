@@ -82,15 +82,17 @@
     <div class="footer-widget">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-2" ng-repeat="linkItem in $ctrl.linkList track by $index">
                     <div class="single-widget">
-                        <h2>Service</h2>
+                        <h2>{{linkItem.label}}</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Online Help</a></li>
+                            <li><a ng-href="subItem.link" ng-repeat="subItem in linkItem.subItems track by $index">{{subItem.label}}</a></li>
+<!--
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Order Status</a></li>
                             <li><a href="#">Change Location</a></li>
                             <li><a href="#">FAQ’s</a></li>
+-->
                         </ul>
                     </div>
                 </div>
@@ -105,6 +107,7 @@
                             <li><a href="#">Shoes</a></li>
                         </ul>
                     </div>
+<!--
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
@@ -140,6 +143,7 @@
                         </form>
                     </div>
                 </div>
+-->
 
             </div>
         </div>
