@@ -1,0 +1,27 @@
+{
+    "products": [{
+        "id": 1,
+        "price": 56,
+        "name": "Easy Polo Black Edition",
+        "image": "product12.jpg"
+    }, {
+        "id": 1,
+        "price": 6,
+        "name": "Easy Polo Black Edition",
+        "image": "product12.jpg",
+        "new": true,
+        "onSale": false
+    }, {
+        "id": 1,
+        "price": 10,
+        "name": "Easy Polo Black Edition",
+        "image": "product12.jpg",
+        "new": false,
+        "onSale": true
+    }, {
+        "id": 1,
+        "price": 5,
+        "name": "Easy Polo Black Edition",
+        "image": "product12.jpg"
+    }]
+}

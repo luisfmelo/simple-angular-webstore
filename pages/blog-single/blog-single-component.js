@@ -1,3 +1,4 @@
 angular.module('onlineStore').component('blogSinglePage', {
-    templateUrl: 'pages/blog-single/blog-single.html'
+    templateUrl: 'pages/blog-single/blog-single.html',
+    controller: 'BlogSingleController'
 });

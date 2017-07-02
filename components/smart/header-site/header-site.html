@@ -90,7 +90,7 @@
                                 on-click="$ctrl.onLinkIconClick">
                                 <a href="{{::item.link}}" ng-class="{'active': $ctrl.isMenuLinkActive(item.link)}">
                                     {{::item.label}}
-                                    <i ng-if="item.subItems.length > 0" class="fa fa-angle-down"></i>
+                                    <i ng-if="::item.subItems.length > 0" class="fa fa-angle-down"></i>
                                 </a>
                                 <ul ng-if="item.subItems.length > 0" role="menu" class="sub-menu">
                                     <li ng-repeat="subItem in item.subItems track by $index" >

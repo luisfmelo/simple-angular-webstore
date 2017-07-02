@@ -17,7 +17,7 @@ angular.module('onlineStore').config([
         .when('/blog', {
             template: '<blog-page></blog-page>'
         })
-        .when('/blog-single', {
+        .when('/blog/:blogId', {
             template: '<blog-single-page></blog-single-page>'
         })
         .when('/cart', {

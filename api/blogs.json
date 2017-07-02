@@ -1,0 +1,19 @@
+{
+    "blogs": [{
+        "id": 1,
+        "image": "images/blog/blog-one.jpg",
+        "title": "GIRLS PINK T SHIRT ARRIVED IN STOREs",
+        "date": 1499003807982,
+        "rate": 4.5,
+        "author": "Mac Doe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+    }, {
+        "id": 2,
+        "image": "images/blog/blog-one.jpg",
+        "title": "GIRLS PINK T SHIRT ARRIVED IN STORE",
+        "date": 1499003807982,
+        "rate": 4.5,
+        "author": "Mac Doe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+    }]
+}
