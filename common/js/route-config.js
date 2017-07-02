@@ -1,33 +1,44 @@
 angular.module('onlineStore').config([
     '$routeProvider',
-//    '$locationProvider',
-    function routeConfig($routeProvider) {
+    '$locationProvider',
+    function routeConfig($routeProvider, $locationProvider) {
         'use strict';
-        
-        $routeProvider.when('/', {
+
+        $routeProvider
+        .when('/', {
             template: '<index-page></index-page>'
-        }).when('/contacts', {
+        })
+        .when('/contacts', {
             template: '<contacts-page></contacts-page>'
-        }).when('/blog', {
+        })
+        .when('/error', {
+            template: '<error-page></error-page>'
+        })
+        .when('/blog', {
             template: '<blog-page></blog-page>'
-        }).when('/blog-single', {
+        })
+        .when('/blog-single', {
             template: '<blog-single-page></blog-single-page>'
-        }).when('/cart', {
+        })
+        .when('/cart', {
             template: '<cart-page></cart-page>'
-        }).when('/checkout', {
+        })
+        .when('/checkout', {
             template: '<checkout-page></checkout-page>'
-        }).when('/shop', {
-            template: '<shop-page></shop-page>'
-        }).when('/product-details', {
-            template: '<product-details-page></product-details-page>'
-        }).when('/login', {
+        })
+        .when('/login', {
             template: '<login-page></login-page>'
-        }).when('/404', {
-            template: '<not-found-page></not-found-page>'
-        }).otherwise({
-            redirectTo: '/error'    
+        })
+        .when('/product-details', {
+            template: '<product-details-page></product-details-page>'
+        })
+        .when('/shop', {
+            template: '<shop-page></shop-page>'
+        })
+        .otherwise({
+            redirectTo: '/error'
         });
-        
-//        $locationProvider.html5Mode(true);
+
+        $locationProvider.html5Mode(false);
     }
 ]);

@@ -1,4 +1,4 @@
 angular.module('onlineStore').component('footerSite', {
-    controller: 'FooterSiteController',
-    templateUrl: 'components/smart/footer-site/footer-site.html'
+    templateUrl: 'components/smart/footer-site/footer-site.html',
+    controller: 'FooterSiteController'
 });

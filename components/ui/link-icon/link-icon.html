@@ -1,0 +1,9 @@
+<li>
+    <a ng-href="{{::$ctrl.viewModel.link}}"
+       ng-click="$ctrl.onClick($ctrl.viewModel)"
+       ng-class="{'active': $ctrl.isActive}">
+        <i ng-if="$ctrl.viewModel.icon"
+           ng-class="$ctrl.viewModel.icon"
+           class="fa"></i> {{::$ctrl.viewModel.label}}
+    </a>
+</li>

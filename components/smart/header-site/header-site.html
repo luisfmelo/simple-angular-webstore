@@ -5,8 +5,9 @@
                 <div class="col-sm-6">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                            <link-icon ng-repeat="item in ::$ctrl.contactLinks track by $index"
+                                       view-model="item"
+                                       on-click="$ctrl.onLinkIconClick"></link-icon>
                         </ul>
                     </div>
                 </div>
@@ -24,7 +25,7 @@
             </div>
         </div>
     </div><!--/header_top-->
-
+    
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
@@ -43,7 +44,7 @@
                                 <li><a href="#">UK</a></li>
                             </ul>
                         </div>
-
+                        
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                 DOLLAR
@@ -59,11 +60,9 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                            <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                            <link-icon ng-repeat="item in $ctrl.quickLinks track by $index"
+                                       view-model="item"
+                                       on-click="$ctrl.onLinkIconClick"></link-icon>
                         </ul>
                     </div>
                 </div>
@@ -85,15 +84,25 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
+                           
+                            <li ng-repeat="item in ::$ctrl.menuLinks track by $index"     
+                                ng-class="{'dropdown': item.subItems.length > 0}"
+                                on-click="$ctrl.onLinkIconClick">
+                                <a href="{{::item.link}}" ng-class="{'active': $ctrl.isMenuLinkActive(item.link)}">
+                                    {{::item.label}}
+                                    <i ng-if="item.subItems.length > 0" class="fa fa-angle-down"></i>
+                                </a>
+                                <ul ng-if="item.subItems.length > 0" role="menu" class="sub-menu">
+                                    <li ng-repeat="subItem in item.subItems track by $index" >
+                                        <a ng-href="{{::subItem.link}}"  ng-class="{'active': $ctrl.isMenuLinkActive(subItem.link)}">{{::subItem.label}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+<!--
+                           
                             <li><a href="index.html" class="active">Home</a></li>
                             <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a href="shop.html">Products</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li> 
-                                    <li><a href="checkout.html">Checkout</a></li> 
-                                    <li><a href="cart.html">Cart</a></li> 
-                                    <li><a href="login.html">Login</a></li> 
-                                </ul>
+                                
                             </li> 
                             <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
@@ -103,6 +112,7 @@
                             </li> 
                             <li><a href="404.html">404</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
+-->
                         </ul>
                     </div>
                 </div>

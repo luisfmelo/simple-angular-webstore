@@ -1,21 +1,21 @@
- angular.module('onlineStore').constant('FOOTER.CONFIG', {
-    LINKS: [{
+angular.module('onlineStore').constant('FOOTER.CONFIG', {
+    links: [{
         label: 'Service',
         subItems: [{
             label: 'Online Help',
-            link: '#'
-        },{
+            link: 'http://google.com'
+        }, {
             label: 'Online Help',
-            link: '#'
+            link: 'http://google.com'
         }]
-    },{
-        label: 'Luis',
+    }, {
+        label: 'Service2',
         subItems: [{
-            label: 'é',
-            link: '#'
-        },{
-            label: 'lindo',
-            link: '#'
+            label: 'Online2 Help',
+            link: 'http://google.com'
+        }, {
+            label: 'Online2 Help',
+            link: 'http://google.com'
         }]
     }]
- });
+})
